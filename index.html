@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F3F5F7">
+<title>Jashanth Gowda R | Tool Design and Digital Manufacturing Engineer</title>
+<meta name="description" content="Portfolio of Jashanth Gowda R, a tool design and digital manufacturing engineer from Hassan, Karnataka. Jigs and fixtures, multi-axis CNC programming, CAD/CAM and industrial robotics.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jashanth Gowda R | Tool Design and Digital Manufacturing Engineer">
+<meta property="og:description" content="Jigs and fixtures, multi-axis CNC programming, CAD/CAM and industrial robotics. 4th rank at State-level WorldSkills (CNC milling).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A4B84'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3EJR%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Jashanth Gowda R","jobTitle":"Tool Design and Digital Manufacturing Engineer","email":"mailto:jashanthjivith@gmail.com","telephone":"+918710062575","address":{"@type":"PostalAddress","addressLocality":"Hassan","addressRegion":"Karnataka","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/jashanthgowdar/"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Dayananda Sagar University"},{"@type":"EducationalOrganization","name":"Nettur Technical Training Foundation (NTTF)"}]}
+</script>
+
+<style>
+/* ==========================================================
+   Tokens
+   ========================================================== */
+:root{
+  --paper:#F3F5F7;
+  --sheet:#FFFFFF;
+  --ink:#0F1B26;
+  --steel:#4B5966;
+  --line:#D9E0E6;
+  --line-strong:#B4C0CB;
+  --blue:#1A4B84;
+  --blue-deep:#123761;
+  --blue-soft:#E6EEF7;
+  --signal:#C2410C;
+  --green:#1B7A45;
+  --navy:#0D2036;
+
+  --font-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --radius:6px;
+  --header-h:64px;
+  --wrap:1180px;
+  --gutter:clamp(1.25rem,5vw,2.5rem);
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 8px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:400 1rem/1.65 var(--font-body);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body.lock{overflow:hidden}
+img,svg{max-width:100%}
+h1,h2,h3,h4,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.015em;line-height:1.12;font-weight:700}
+h1,h2{text-wrap:balance}
+h1{font-size:clamp(2.1rem,6.2vw,3.85rem);font-weight:750;font-stretch:106%;letter-spacing:-.025em}
+h2{font-size:clamp(1.65rem,4vw,2.4rem)}
+h3{font-size:1.2rem}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.icon{display:inline-block;width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--ink);color:#fff;padding:.7rem 1rem;border-radius:var(--radius);text-decoration:none}
+.skip:focus{top:1rem}
+
+.profile-pic-container {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 14px rgba(13,32,54,.12);
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile-pic-container a { 
+  display: block; 
+  border-radius: 50%; 
+  text-decoration: none;
+}
+.profile-pic-container a:hover .profile-img {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13,32,54,.16);
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:48px;padding:0 1.35rem;border-radius:var(--radius);
+  border:1.5px solid transparent;font:600 .95rem var(--font-body);
+  text-decoration:none;cursor:pointer;
+  transition:background-color .15s,border-color .15s,color .15s;
+}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-deep)}
+.btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-quiet{background:transparent;color:var(--blue);padding:0 .6rem}
+.btn-quiet:hover{text-decoration:underline;text-underline-offset:3px}
+.btn-on-dark{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
+.btn-on-dark:hover{background:#fff;color:var(--navy)}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(243,245,247,.93);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;min-width:0}
+.brand-mark{
+  display:grid;place-items:center;flex:none;width:40px;height:40px;
+  border:2px solid var(--ink);font:800 .95rem var(--font-display);letter-spacing:.02em;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.brand-text strong{font:700 1rem var(--font-display);white-space:nowrap}
+.brand-text small{color:var(--steel);font-size:.78rem;white-space:nowrap}
+@media (max-width:479px){.brand-text small{display:none}}
+
+.nav-toggle{
+  display:grid;place-items:center;flex:none;width:44px;height:44px;
+  background:transparent;border:1px solid var(--line-strong);border-radius:var(--radius);cursor:pointer;
+}
+.nav-toggle .i-close{display:none}
+.nav-toggle[aria-expanded="true"] .i-open{display:none}
+.nav-toggle[aria-expanded="true"] .i-close{display:inline-block}
+
+.nav{
+  display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+  background:var(--sheet);border-bottom:1px solid var(--line);
+  padding:.25rem var(--gutter) 1.25rem;
+  box-shadow:0 18px 30px -18px rgba(13,32,54,.3);
+}
+.nav.open{display:flex}
+.nav a{padding:.95rem 0;text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.nav a[aria-current="true"]{color:var(--blue)}
+.nav .nav-cta{margin-top:1rem;text-align:center;background:var(--blue);color:#fff;border:0;border-radius:var(--radius);padding:.9rem 1rem;font-weight:600}
+.nav .nav-cta:hover{background:var(--blue-deep)}
+
+@media (min-width:860px){
+  .nav-toggle{display:none}
+  .nav,.nav.open{
+    display:flex;position:static;flex-direction:row;align-items:center;gap:1.75rem;
+    padding:0;background:none;border:0;box-shadow:none;
+  }
+  .nav a{padding:.5rem 0;border-bottom:2px solid transparent;font-size:.92rem}
+  .nav a[aria-current="true"]{border-bottom-color:var(--blue)}
+  .nav .nav-cta{margin:0;padding:.6rem 1.15rem;border:0}
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+.hero{padding:clamp(2.25rem,6vw,5rem) 0 clamp(2.5rem,6vw,4.5rem)}
+.hero-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr)}}
+
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.25rem;
+  padding:.4rem .9rem;background:var(--sheet);border:1px solid var(--line-strong);
+  border-radius:999px;font-size:.86rem;font-weight:500;
+}
+.status .dot{width:8px;height:8px;border-radius:50%;background:#1F8A4C;flex:none}
+.lead{margin-top:1.25rem;max-width:58ch;font-size:clamp(1.02rem,2.2vw,1.15rem);color:#2B3947}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:2rem}
+@media (max-width:519px){
+  .actions .btn-primary,.actions .btn-ghost{flex:1 1 calc(50% - .4rem);padding:0 .75rem}
+  .actions .btn-quiet{flex:1 1 100%}
+}
+
+/* drawing sheet */
+.sheet{background:var(--sheet);border:1.5px solid var(--ink)}
+.sheet-art{
+  padding:clamp(.5rem,2vw,1.25rem);border-bottom:1.5px solid var(--ink);
+  background-color:#fff;
+  background-image:linear-gradient(#E9EEF2 1px,transparent 1px),linear-gradient(90deg,#E9EEF2 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.sheet-art svg{display:block;width:100%;height:auto}
+.tblock{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-strong)}
+.tblock>div{background:var(--sheet);padding:.65rem .9rem}
+.tblock .wide{grid-column:1/-1}
+.tblock dt{font-size:.74rem;color:var(--steel);line-height:1.3}
+.tblock dd{font-weight:500;font-size:.92rem;line-height:1.35}
+
+/* drawing animation: one orchestrated moment */
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s cubic-bezier(.6,0,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes draw{from{stroke-dashoffset:1}99%{stroke-dashoffset:0}100%{stroke-dashoffset:0;stroke-dasharray:none}}
+.fade{opacity:0;animation:fade .6s ease both;animation-delay:var(--d,0s)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  .fade{animation:none;opacity:1}
+}
+.ln{stroke:#0F1B26;stroke-width:2;stroke-linejoin:round}
+.thin{stroke:#0F1B26;stroke-width:1}
+.dimln{stroke:#4B5966;stroke-width:1}
+.cl{fill:none;stroke:#1A4B84;stroke-width:1;stroke-dasharray:14 3 2 3}
+.t{font:500 16px "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;fill:#0F1B26}
+.t-soft{font:400 13px "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;fill:#4B5966}
+
+/* ==========================================================
+   Highlights strip
+   ========================================================== */
+.facts{background:var(--sheet);border-block:1px solid var(--line)}
+.fact-list{display:grid;grid-template-columns:repeat(2,1fr)}
+.fact-list li{padding:1.3rem 1.1rem;border-left:1px solid var(--line)}
+.fact-list li:nth-child(odd){border-left:0;padding-left:0}
+.fact-list li:nth-child(n+3){border-top:1px solid var(--line)}
+.fact-figure{display:block;font:700 clamp(1.3rem,3vw,1.7rem)/1.15 var(--font-display);color:var(--blue);font-variant-numeric:tabular-nums}
+.fact-text{display:block;margin-top:.3rem;font-size:.9rem;color:var(--steel);line-height:1.4}
+@media (min-width:900px){
+  .fact-list{grid-template-columns:repeat(4,1fr)}
+  .fact-list li,.fact-list li:nth-child(odd){padding:1.6rem 1.5rem;border-left:1px solid var(--line);border-top:0}
+  .fact-list li:first-child{border-left:0;padding-left:0}
+}
+
+/* ==========================================================
+   Sections
+   ========================================================== */
+.section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.section-alt{background:var(--sheet);border-block:1px solid var(--line)}
+.split-head{display:grid;gap:1rem 3rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.split-head p{color:var(--steel);max-width:60ch}
+@media (min-width:900px){.split-head{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* About */
+.caps{display:grid;gap:2rem}
+@media (min-width:800px){.caps{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.cap{border-top:3px solid var(--ink);padding-top:1.25rem}
+.cap .icon{width:2rem;height:2rem;color:var(--blue);stroke-width:1.5}
+.cap h3{margin:.9rem 0 .5rem}
+.cap p{color:var(--steel)}
+
+/* Skills */
+.skills-head{display:flex;flex-direction:column;gap:1.25rem;margin-bottom:1.5rem}
+.skills-head h2{max-width:22ch}
+@media (min-width:1000px){
+  .skills-head{flex-direction:row;justify-content:space-between;align-items:end;gap:2rem}
+  .skills-head h2{flex:1 1 auto;min-width:0}
+}
+.chips{
+  display:flex;gap:.5rem;overflow-x:auto;padding:.15rem var(--gutter) .4rem;margin-inline:calc(-1*var(--gutter));
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.chips::-webkit-scrollbar{display:none}
+@media (min-width:1000px){.chips{flex:none;margin-inline:0;padding-inline:0;overflow:visible}}
+.chip{
+  flex:none;min-height:42px;padding:0 1.05rem;background:var(--sheet);
+  border:1px solid var(--line-strong);border-radius:999px;font-size:.88rem;font-weight:500;cursor:pointer;
+  transition:background-color .15s,color .15s,border-color .15s;
+}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.skill-count{margin-bottom:1.25rem;font-size:.86rem;color:var(--steel)}
+
+.skill-grid{display:grid;gap:1rem}
+@media (min-width:700px){.skill-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1040px){.skill-grid{grid-template-columns:repeat(3,1fr)}}
+.skill{display:flex;flex-direction:column;gap:1rem;padding:1.25rem;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+.skill-top{display:flex;align-items:flex-start;gap:.85rem}
+.skill-mark{
+  flex:none;display:grid;place-items:center;min-width:46px;height:46px;padding:0 .4rem;
+  background:var(--blue-soft);color:var(--blue);border-radius:3px;font:600 .75rem var(--font-mono);
+}
+.skill-name{font:700 1.02rem/1.25 var(--font-display)}
+.skill-sub{font-size:.86rem;color:var(--steel);line-height:1.4;margin-top:.15rem}
+.skill-meter{display:grid;gap:.4rem}
+.skill-level{font-size:.8rem;font-weight:600;color:var(--blue)}
+.ruler{
+  position:relative;height:12px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);
+  background:repeating-linear-gradient(90deg,var(--line-strong) 0 1px,transparent 1px 10%);
+}
+.ruler i{position:absolute;left:0;bottom:0;height:5px;width:calc(var(--v)*1%);background:var(--blue)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto}
+.tag{font-size:.76rem;line-height:1.3;padding:.2rem .55rem;background:var(--sheet);border:1px solid var(--line);border-radius:3px;color:var(--steel)}
+
+/* Projects */
+.project-list{display:grid;gap:clamp(2rem,5vw,3.5rem)}
+.project{display:grid;background:var(--sheet);border:1px solid var(--line)}
+.project-media{
+  position:relative;display:grid;place-items:center;min-height:250px;padding:3.25rem 1.25rem 1.25rem;
+  background-color:var(--blue-soft);
+  background-image:linear-gradient(rgba(26,75,132,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(26,75,132,.09) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.project-media svg{display:block;width:100%;max-width:440px;height:auto}
+.project-cat{
+  position:absolute;top:.9rem;left:.9rem;padding:.2rem .65rem;background:var(--sheet);
+  border:1px solid var(--line-strong);border-radius:3px;font-size:.78rem;font-weight:600;
+}
+.project-body{padding:1.5rem 1.25rem 1.5rem}
+.project-body h3{font-size:clamp(1.3rem,3vw,1.6rem)}
+.project-body>p{margin-top:.75rem;color:var(--steel)}
+.pso{margin-top:1.25rem;border-bottom:1px solid var(--line)}
+.pso>div{display:grid;grid-template-columns:5.4rem 1fr;gap:.75rem;padding:.75rem 0;border-top:1px solid var(--line);font-size:.92rem}
+.pso dt{font-weight:600}
+.pso .p{color:var(--signal)}
+.pso .s{color:var(--blue)}
+.pso .o{color:var(--green)}
+.project-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.25rem}
+@media (min-width:900px){
+  .project{grid-template-columns:1fr 1.1fr}
+  .project-media{min-height:100%}
+  .project-body{padding:2rem 2.25rem}
+  .project:nth-child(even) .project-media{order:2}
+}
+
+/* Credentials */
+.cred-grid{display:grid;gap:3.25rem}
+@media (min-width:960px){.cred-grid{grid-template-columns:1fr 1fr;gap:4.5rem}}
+.col-title{display:flex;align-items:center;gap:.75rem;margin-bottom:1.75rem}
+.col-title .icon{width:1.6rem;height:1.6rem;color:var(--blue)}
+.timeline{margin-left:.45rem;padding-left:1.75rem;border-left:2px solid var(--line-strong);display:grid;gap:1.9rem}
+.tl-item{position:relative}
+.tl-item::before{
+  content:"";position:absolute;left:calc(-1.75rem - 7px);top:.35rem;width:12px;height:12px;
+  background:var(--sheet);border:2px solid var(--line-strong);border-radius:50%;
+}
+.tl-item.current::before{border-color:var(--blue);background:var(--blue)}
+.tl-date{display:inline-block;padding:.1rem .6rem;background:var(--blue-soft);color:var(--blue);border-radius:3px;font-size:.8rem;font-weight:600}
+.tl-item h4{margin-top:.55rem;font-size:1.1rem;line-height:1.25}
+.tl-org{margin-top:.15rem;font-weight:600;font-size:.94rem}
+.tl-desc{margin-top:.3rem;font-size:.9rem;color:var(--steel)}
+
+.awards{display:grid;gap:1rem}
+.award{display:flex;gap:1rem;padding:1.1rem 1.1rem 1.1rem 1rem;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--line-strong)}
+.award.top{border-left-color:var(--signal)}
+.award-icon{flex:none;display:grid;place-items:center;width:42px;height:42px;background:var(--sheet);border-radius:4px;color:var(--blue)}
+.award.top .award-icon{color:var(--signal)}
+.award-icon .icon{width:1.4rem;height:1.4rem}
+.timeline{margin-block:0}
+.award h4{font-size:1.02rem;line-height:1.3}
+.award p{margin-top:.3rem;font-size:.9rem;color:var(--steel)}
+.badge{display:inline-block;margin-left:.4rem;padding:.05rem .5rem;border:1px solid var(--signal);border-radius:3px;color:var(--signal);font:600 .72rem var(--font-body);vertical-align:.12em}
+
+/* Contact */
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff;max-width:24ch}
+.contact-grid{display:grid;gap:2.5rem}
+@media (min-width:960px){.contact-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}}
+.contact-lead{margin-top:1rem;max-width:50ch;color:#C4D1DE}
+.contact-list{margin-top:2rem;border-top:1px solid rgba(255,255,255,.18)}
+.contact-row{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.contact-ico{flex:none;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:4px;color:#9CC4F0}
+.contact-row>div{min-width:0}
+.contact-label{font-size:.78rem;color:#9FB2C5;line-height:1.3}
+.contact-value{font-weight:600;font-size:clamp(.84rem,3.6vw,1rem);color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.contact-row{gap:.85rem}
+a.contact-value:hover{text-decoration:underline;text-underline-offset:3px}
+.contact-note{font-size:.84rem;color:#9FB2C5}
+.icon-btn{
+  flex:none;display:grid;place-items:center;width:44px;height:44px;margin-left:auto;
+  background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:var(--radius);color:#fff;cursor:pointer;
+}
+.icon-btn:hover{background:rgba(255,255,255,.12)}
+.contact .btn{margin-top:1.5rem}
+.contact :focus-visible{outline-color:#9CC4F0}
+
+.form-card{background:var(--sheet);color:var(--ink);border-radius:8px;padding:clamp(1.25rem,4vw,2rem)}
+.form-card h3{font-size:1.3rem;margin-bottom:1.25rem}
+.form-grid{display:grid;gap:1rem}
+@media (min-width:560px){.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
+.field{display:grid;gap:.4rem}
+.field label{font-size:.88rem;font-weight:600}
+.field input,.field textarea{
+  width:100%;min-height:48px;padding:.75rem .9rem;background:#fff;
+  border:1.5px solid var(--line-strong);border-radius:4px;transition:border-color .15s,box-shadow .15s;
+}
+.field textarea{min-height:150px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,75,132,.2)}
+.field input::placeholder,.field textarea::placeholder{color:#7B8895}
+.form-card .btn{width:100%}
+.form-status{margin-top:1rem;padding:.8rem 1rem;background:#E8F4EC;border-left:4px solid var(--green);font-size:.9rem}
+
+/* Footer */
+.site-footer{background:#091827;color:#9FB2C5;padding:1.75rem 0;font-size:.88rem}
+.footer-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem}
+.site-footer a{color:#fff;text-underline-offset:3px}
+
+/* Dialog */
+dialog{
+  width:min(660px,calc(100% - 2rem));max-height:calc(100vh - 2rem);max-height:calc(100dvh - 2rem);
+  padding:0;border:0;border-radius:8px;background:var(--sheet);color:var(--ink);
+  box-shadow:0 24px 60px rgba(13,32,54,.4);overflow:hidden;
+}
+dialog::backdrop{background:rgba(13,32,54,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.dlg-panel{display:flex;flex-direction:column;max-height:calc(100vh - 2rem);max-height:calc(100dvh - 2rem)}
+.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1.25rem 1.25rem 1rem;border-bottom:1px solid var(--line)}
+.dlg-domain{font-size:.82rem;font-weight:600;color:var(--blue);margin-bottom:.35rem}
+.dlg-head h3{font-size:1.3rem;line-height:1.2}
+.dlg-x{flex:none;display:grid;place-items:center;width:44px;height:44px;margin:-.4rem -.4rem 0 0;background:transparent;border:0;border-radius:var(--radius);cursor:pointer}
+.dlg-x:hover{background:var(--paper)}
+.dlg-body{padding:1.25rem;overflow-y:auto;display:grid;gap:1.25rem;font-size:.95rem}
+.dlg-body h4{font-size:.98rem;margin-bottom:.6rem}
+.dlg-points{display:grid;gap:.6rem}
+.dlg-points li{position:relative;padding-left:1.1rem;color:#2B3947}
+.dlg-points li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;background:var(--blue)}
+.dlg-outcome{padding:.9rem 1rem;background:#E8F4EC;border-left:4px solid var(--green);font-size:.93rem}
+.dlg-foot{padding:1rem 1.25rem;border-top:1px solid var(--line);display:flex;justify-content:flex-end}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:max(1.25rem,env(safe-area-inset-bottom));z-index:200;
+  max-width:calc(100% - 2rem);padding:.75rem 1.1rem;background:var(--ink);color:#fff;border-radius:6px;
+  font-size:.9rem;text-align:center;opacity:0;pointer-events:none;transform:translate(-50%,16px);
+  transition:opacity .2s,transform .2s;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ==========================================================
+   Printable résumé (screen: hidden, print: only this)
+   ========================================================== */
+#resume{display:none}
+@media print{
+  @page{size:A4;margin:13mm}
+  html,body{background:#fff!important}
+  .site,.skip,.toast{display:none!important}
+  #resume{display:block;color:#000;font:400 10pt/1.45 "IBM Plex Sans","Segoe UI",Arial,sans-serif}
+  #resume h1{font:750 21pt/1.1 "Archivo",Arial,sans-serif;letter-spacing:-.01em}
+  #resume .r-role{margin-top:2pt;font-weight:600;color:#1A4B84}
+  #resume .r-contact{margin-top:4pt;font-size:9.5pt;color:#333}
+  #resume h2{margin:12pt 0 4pt;padding-bottom:2pt;border-bottom:1.2pt solid #000;font:700 10.5pt "Archivo",Arial,sans-serif;letter-spacing:.01em}
+  #resume p{margin:0 0 3pt}
+  #resume ul{margin:0;padding-left:13pt;list-style:disc}
+  #resume li{margin-bottom:2pt}
+  #resume .r-row{display:flex;justify-content:space-between;gap:10pt;font-weight:600}
+  #resume .r-row span:last-child{font-weight:400;white-space:nowrap;color:#333}
+  #resume .r-sub{color:#333;margin-bottom:3pt}
+  #resume section{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10.5V17M8 7.4v.1M12 17v-6.5M12 13.5a3 3 0 0 1 6 0V17"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11l4.5 4.5 4.5-4.5M5 20h14"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-jig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="12" cy="12" r="4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></symbol>
+  <symbol id="i-cnc" viewBox="0 0 24 24"><path d="M8.5 3h7v9l-2 3h-3l-2-3z"/><path d="M12 15v6M8.5 6.5l7 2.5M8.5 10l7 2.5"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><path d="M4 20h9"/><path d="M8.5 20v-6l5-6"/><circle cx="8.5" cy="14" r="1.6"/><circle cx="13.5" cy="8" r="1.6"/><path d="M15 7l4.5-3M19.5 4v3.5"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.500 6-3v-4.500"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3"/><path d="M12 13v4M9 20h6M10 17h4"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="14" r="5"/><path d="M8.5 9.5L6 3h4l2 4M15.5 9.5L18 3h-4l-2 4"/><path d="M12 12v4"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.500-3 8-7 10-4-2-7-5.500-7-10V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.500"/><path d="M2.500 20c0-3.500 3-6 6.500-6s6.500 2.500 6.500 6"/><path d="M16 4.500a3.500 3.500 0 0 1 0 7M18 14.500c2 .7 3.500 2.700 3.500 5.500"/></symbol>
+</svg>
+
+<div class="site">
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Jashanth Gowda R, back to top">
+      <span class="brand-mark" aria-hidden="true">JR</span>
+      <span class="brand-text"><strong>Jashanth Gowda R</strong><small>Tool design and CNC engineer</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <svg class="icon i-open"><use href="#i-menu"/></svg>
+      <svg class="icon i-close"><use href="#i-close"/></svg>
+    </button>
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="profile-pic-container">
+          <a href="https://www.linkedin.com/in/jashanthgowdar/" target="_blank" rel="noopener" aria-label="Visit Jashanth's LinkedIn profile">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQEmOOwxU4NFeQ/profile-displayphoto-crop_800_800/B56Z2Psac7GgAI-/0/1776232282144?e=1791417600&v=beta&t=MlR3gXEau2iYlWZqBnvqbP2S1_Wb5k9q3Rsq160rXoQ" alt="Jashanth Gowda R" class="profile-img">
+          </a>
+        </div>
+        <p class="status"><span class="dot" aria-hidden="true"></span>Open to tool design and CNC roles</p>
+        <h1 id="hero-h">Tool design and CNC machining, from the first drawing to the finished part.</h1>
+        <p class="lead">I'm Jashanth Gowda R, a tool engineering student at NTTF Peenya and Dayananda Sagar University. I design jigs and fixtures, program multi-axis CNC machines in Mastercam and Fusion 360, and operate industrial robot cells.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact me</a>
+          <button class="btn btn-quiet" type="button" data-print>
+            <svg class="icon"><use href="#i-download"/></svg>Download resume
+          </button>
+        </div>
+      </div>
+
+      <figure class="sheet">
+        <div class="sheet-art">
+          <svg viewBox="0 0 560 410" role="img" aria-labelledby="dwgTitle dwgDesc">
+            <title id="dwgTitle">Precision drilling jig, plan view</title>
+            <desc id="dwgDesc">Engineering drawing of a drilling jig plate with a central drill bush, three locating pins, four clamp screws and dimension lines.</desc>
+            <defs>
+              <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                <path d="M0 1L10 5L0 9z" fill="#4B5966"/>
+              </marker>
+              <g id="screw"><circle r="9"/><circle r="4"/><path d="M-14 0H14M0-14V14" stroke-width="1"/></g>
+            </defs>
+
+            <!-- plate and recess -->
+            <rect class="draw ln" pathLength="1" x="90" y="70" width="340" height="240" fill="none" style="--d:.1s"/>
+            <rect class="draw thin" pathLength="1" x="112" y="92" width="296" height="196" fill="none" style="--d:.3s"/>
+            <!-- workpiece and drill bush -->
+            <circle class="draw ln" pathLength="1" cx="260" cy="190" r="72" fill="none" style="--d:.5s"/>
+            <circle class="draw ln" pathLength="1" cx="260" cy="190" r="26" fill="none" style="--d:.8s"/>
+            <circle class="draw ln" pathLength="1" cx="260" cy="190" r="13" fill="none" style="--d:.95s"/>
+            <!-- locating pins (3-2-1) -->
+            <circle class="draw ln" pathLength="1" cx="195.300" cy="144.700" r="7" fill="none" style="--d:1s"/>
+            <circle class="draw ln" pathLength="1" cx="195.300" cy="235.300" r="7" fill="none" style="--d:1.05s"/>
+            <circle class="draw ln" pathLength="1" cx="260" cy="269" r="7" fill="none" style="--d:1.1s"/>
+            <!-- clamp screws -->
+            <g class="fade" style="--d:1.15s" fill="none" stroke="#0F1B26" stroke-width="1.5">
+              <use href="#screw" x="136" y="114"/><use href="#screw" x="384" y="114"/>
+              <use href="#screw" x="136" y="266"/><use href="#screw" x="384" y="266"/>
+            </g>
+            <!-- centre lines -->
+            <path class="cl fade" d="M62 190H458M260 40V322" style="--d:1.25s"/>
+
+            <!-- vertical dimension: 120 -->
+            <path class="draw dimln" pathLength="1" fill="none" d="M90 70H44M90 310H44" style="--d:1.35s"/>
+            <path class="draw dimln" pathLength="1" fill="none" d="M52 70V310" marker-start="url(#arr)" marker-end="url(#arr)" style="--d:1.4s"/>
+            <text class="t fade" transform="translate(38 190) rotate(-90)" text-anchor="middle" style="--d:1.8s">120</text>
+            <!-- horizontal dimension: 170 -->
+            <path class="draw dimln" pathLength="1" fill="none" d="M90 310V356M430 310V356" style="--d:1.35s"/>
+            <path class="draw dimln" pathLength="1" fill="none" d="M90 348H430" marker-start="url(#arr)" marker-end="url(#arr)" style="--d:1.4s"/>
+            <text class="t fade" x="260" y="340" text-anchor="middle" style="--d:1.8s">170</text>
+
+            <!-- leader: bush diameter -->
+            <path class="draw dimln" pathLength="1" fill="none" d="M269 181L340 120H520" marker-start="url(#arr)" style="--d:1.6s"/>
+            <text class="t fade" x="436" y="112" style="--d:1.9s">Ø12 H7</text>
+
+            <!-- feature control frame -->
+            <g class="fade" style="--d:2s" fill="none" stroke="#0F1B26" stroke-width="1.2">
+              <rect x="300" y="364" width="26" height="26"/><rect x="326" y="364" width="72" height="26"/><rect x="398" y="364" width="26" height="26"/>
+              <circle cx="313" cy="377" r="7"/><path d="M313 368v18M304 377h18"/>
+            </g>
+            <text class="t fade" x="362" y="383" text-anchor="middle" style="--d:2s">Ø0.05</text>
+            <text class="t fade" x="411" y="383" text-anchor="middle" style="--d:2s">A</text>
+            <text class="t-soft fade" x="90" y="384" style="--d:2s">SCALE 1:2</text>
+          </svg>
+        </div>
+        <figcaption>
+          <dl class="tblock">
+            <div class="wide"><dt>Drawing</dt><dd>Precision drilling jig, plan view</dd></div>
+            <div><dt>Drawn by</dt><dd>Jashanth Gowda R</dd></div>
+            <div><dt>Base</dt><dd>Hassan, Karnataka</dd></div>
+            <div><dt>Discipline</dt><dd>Tool engineering, CNC, robotics</dd></div>
+            <div><dt>Status</dt><dd>Open to roles</dd></div>
+          </dl>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= HIGHLIGHTS ================= -->
+  <section class="facts" aria-label="Highlights">
+    <div class="wrap">
+      <ul class="fact-list">
+        <li><span class="fact-figure">4th rank</span><span class="fact-text">State-level WorldSkills, CNC milling</span></li>
+        <li><span class="fact-figure">2nd place</span><span class="fact-text">Autodesk design competition</span></li>
+        <li><span class="fact-figure">Trainer</span><span class="fact-text">Fusion 360 workshops for college staff</span></li>
+        <li><span class="fact-figure">Certified</span><span class="fact-text">Junior robot operator and programmer</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="split-head">
+        <h2 id="about-h">Design the tool, program the machine, run the cell.</h2>
+        <p>I work across the full path a part takes: parametric CAD, tooling design with GD&amp;T, CAM programming, machining and inspection, and robotic handling. I can design a fixture, machine it myself and measure the result.</p>
+      </div>
+      <div class="caps">
+        <article class="cap">
+          <svg class="icon"><use href="#i-jig"/></svg>
+          <h3>Tool and fixture engineering</h3>
+          <p>Designs precision drilling jigs, inspection fixtures and cutting tools, applying GD&amp;T so parts hold tolerance from batch to batch.</p>
+        </article>
+        <article class="cap">
+          <svg class="icon"><use href="#i-cnc"/></svg>
+          <h3>Multi-axis CNC machining</h3>
+          <p>CNC milling and turning, G and M-code programming, CAM in Mastercam and Fusion 360, tool wear analysis and surface finish optimization.</p>
+        </article>
+        <article class="cap">
+          <svg class="icon"><use href="#i-robot"/></svg>
+          <h3>Industrial robotics and automation</h3>
+          <p>Certified junior robot operator. Programs pick-and-place, welding and material handling routines on the teach pendant.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section-alt" id="skills" aria-labelledby="skills-h">
+    <div class="wrap">
+      <div class="skills-head">
+        <h2 id="skills-h">Software, machines and shop-floor skills</h2>
+        <div class="chips" role="group" aria-label="Filter skills by category">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="cad" aria-pressed="false">Design and analysis</button>
+          <button class="chip" type="button" data-filter="cam" aria-pressed="false">CAM and CNC</button>
+          <button class="chip" type="button" data-filter="robotics" aria-pressed="false">Robotics and quality</button>
+          <button class="chip" type="button" data-filter="soft" aria-pressed="false">Software</button>
+        </div>
+      </div>
+      <p class="skill-count" id="skillCount" role="status" aria-live="polite">Showing 9 of 9 skills</p>
+
+      <ul class="skill-grid" id="skillGrid">
+        <li class="skill" data-cat="cad">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">SW</span><div><h3 class="skill-name">SolidWorks</h3><p class="skill-sub">Parametric 3D and assemblies</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Advanced</span><div class="ruler" style="--v:90" role="img" aria-label="Proficiency 90 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Part modeling</li><li class="tag">Assemblies</li><li class="tag">2D drafting</li></ul>
+        </li>
+        <li class="skill" data-cat="cad">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">F360</span><div><h3 class="skill-name">Autodesk Fusion 360</h3><p class="skill-sub">CAD, CAM and staff trainer</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Expert</span><div class="ruler" style="--v:95" role="img" aria-label="Proficiency 95 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Trainer</li><li class="tag">Autodesk award</li><li class="tag">Generative design</li></ul>
+        </li>
+        <li class="skill" data-cat="cad">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">ACAD</span><div><h3 class="skill-name">AutoCAD</h3><p class="skill-sub">Orthographic drawings and GD&amp;T</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Advanced</span><div class="ruler" style="--v:88" role="img" aria-label="Proficiency 88 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Sectional views</li><li class="tag">Tolerances</li></ul>
+        </li>
+        <li class="skill" data-cat="cad">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">ANS</span><div><h3 class="skill-name">ANSYS Workbench</h3><p class="skill-sub">FEA and stress analysis</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Intermediate</span><div class="ruler" style="--v:78" role="img" aria-label="Proficiency 78 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Static structural</li><li class="tag">Stress and strain</li></ul>
+        </li>
+        <li class="skill" data-cat="cam">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">MC</span><div><h3 class="skill-name">Mastercam</h3><p class="skill-sub">Toolpath optimization</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Advanced</span><div class="ruler" style="--v:90" role="img" aria-label="Proficiency 90 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">2D and 3D milling</li><li class="tag">Post processing</li></ul>
+        </li>
+        <li class="skill" data-cat="cam">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">CNC</span><div><h3 class="skill-name">CNC milling and turning</h3><p class="skill-sub">G-code and manual operations</p></div></div>
+          <div class="skill-meter"><span class="skill-level">4th rank, State WorldSkills</span><div class="ruler" style="--v:95" role="img" aria-label="Proficiency 95 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Fanuc and Siemens</li><li class="tag">Manual G/M-code</li><li class="tag">Offset setup</li></ul>
+        </li>
+        <li class="skill" data-cat="robotics">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">ROB</span><div><h3 class="skill-name">Industrial robots</h3><p class="skill-sub">Welding and material handling</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Certified</span><div class="ruler" style="--v:85" role="img" aria-label="Proficiency 85 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Pick and place</li><li class="tag">Robot welding</li><li class="tag">Teach pendant</li></ul>
+        </li>
+        <li class="skill" data-cat="robotics">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">QC</span><div><h3 class="skill-name">Jigs, fixtures and metrology</h3><p class="skill-sub">Shop-floor quality control</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Practitioner</span><div class="ruler" style="--v:92" role="img" aria-label="Proficiency 92 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Micrometers and vernier</li><li class="tag">Fitting trade</li><li class="tag">Locating principles</li></ul>
+        </li>
+        <li class="skill" data-cat="soft">
+          <div class="skill-top"><span class="skill-mark" aria-hidden="true">OFF</span><div><h3 class="skill-name">Software and publishing</h3><p class="skill-sub">MS Office, Photoshop, desktop publishing</p></div></div>
+          <div class="skill-meter"><span class="skill-level">Certified</span><div class="ruler" style="--v:88" role="img" aria-label="Proficiency 88 out of 100"><i></i></div></div>
+          <ul class="tags"><li class="tag">Photoshop DTP</li><li class="tag">Excel reports</li><li class="tag">Kannada Nudi</li></ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects" aria-labelledby="projects-h">
+    <div class="wrap">
+      <div class="split-head">
+        <h2 id="projects-h">Projects built and tested in the workshop</h2>
+        <p>Three projects covering tool design, machining experiments and mechatronics. Each one has a full specification you can open.</p>
+      </div>
+
+      <div class="project-list">
+
+        <!-- Project 1 -->
+        <article class="project">
+          <div class="project-media">
+            <span class="project-cat">Tool engineering</span>
+            <svg viewBox="0 0 400 280" role="img" aria-label="Elevation of a drilling jig: a drill passes through a hardened bush in the jig plate above a clamped workpiece">
+              <g fill="none" stroke="#0F1B26" stroke-width="1.6" stroke-linejoin="round">
+                <rect x="50" y="222" width="300" height="24" fill="#fff"/>
+                <rect x="122" y="170" width="156" height="52" fill="#DCE7F3"/>
+                <rect x="96" y="134" width="208" height="36" fill="#fff"/>
+                <rect x="184" y="92" width="32" height="78" fill="#fff"/>
+                <path d="M192 92v78M208 92v78" stroke-width="1" stroke-dasharray="3 3"/>
+                <path d="M96 134v-32h24v32M304 134v-32h-24v32"/>
+                <path d="M104 102v-14M296 102v-14" stroke-width="3"/>
+                <rect x="196" y="34" width="8" height="118" fill="#C2410C" stroke="#7C2A08"/>
+              </g>
+              <path d="M200 20V266" stroke="#1A4B84" stroke-width="1" stroke-dasharray="10 3 2 3" fill="none"/>
+              <path d="M216 100L262 76H340" stroke="#4B5966" stroke-width="1" fill="none"/>
+              <text x="266" y="70" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0F1B26">Hardened bush</text>
+              <path d="M278 196L318 196H350" stroke="#4B5966" stroke-width="1" fill="none"/>
+              <text x="296" y="190" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0F1B26">Workpiece</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Design and fabrication of a precision drilling jig</h3>
+            <p>An ergonomic drilling jig for batch production, built around rapid clamping, the 3-2-1 locating principle and hardened drill bushes that stop tool deflection.</p>
+            <dl class="pso">
+              <div><dt class="p">Problem</dt><dd>Manual layout marking caused hole concentricity errors and inconsistent cycle times.</dd></div>
+              <div><dt class="s">Solution</dt><dd>Modeled in SolidWorks, then made with precision milling and heat-treated drill guides.</dd></div>
+              <div><dt class="o">Outcome</dt><dd>Cut setup time by 40%. Now used as a teaching tool for juniors.</dd></div>
+            </dl>
+            <div class="project-foot">
+              <ul class="tags"><li class="tag">SolidWorks</li><li class="tag">GD&amp;T</li><li class="tag">Fitting</li></ul>
+              <button class="btn btn-ghost" type="button" data-project="jig"><svg class="icon"><use href="#i-plus"/></svg>Full specification</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+          <div class="project-media">
+            <span class="project-cat">CNC and CAM</span>
+            <svg viewBox="0 0 400 280" role="img" aria-label="Chart of flank wear against cutting time. Trochoidal milling reaches the wear limit 35% later than conventional milling">
+              <g stroke="#0F1B26" stroke-width="1.5" fill="none"><path d="M56 30V232H372"/></g>
+              <path d="M56 100H372" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="6 4" fill="none"/>
+              <text x="62" y="92" font-family="IBM Plex Mono,monospace" font-size="12" fill="#C2410C">Wear limit</text>
+              <path d="M56 226C110 214 160 176 206 100" stroke="#4B5966" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+              <path d="M56 228C150 222 230 196 288 100" stroke="#1A4B84" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <circle cx="206" cy="100" r="4.500" fill="#4B5966"/><circle cx="288" cy="100" r="4.500" fill="#1A4B84"/>
+              <path d="M206 78H288" stroke="#0F1B26" stroke-width="1" marker-start="url(#a2)" marker-end="url(#a2)" fill="none"/>
+              <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L10 5L0 9z" fill="#0F1B26"/></marker></defs>
+              <text x="247" y="66" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" font-weight="600" fill="#0F1B26">+35% tool life</text>
+              <text x="190" y="176" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="12" fill="#4B5966">Conventional</text>
+              <text x="270" y="214" text-anchor="start" font-family="IBM Plex Mono,monospace" font-size="12" fill="#1A4B84">Trochoidal</text>
+              <text x="214" y="256" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#4B5966">Cutting time</text>
+              <text transform="translate(24 132) rotate(-90)" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#4B5966">Flank wear</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>CNC machining and tool wear optimization</h3>
+            <p>An experimental study of how cutting speed (Vc), feed per tooth (fz) and depth of cut affect end mill flank wear and surface roughness (Ra).</p>
+            <dl class="pso">
+              <div><dt class="p">Problem</dt><dd>Rapid carbide cutter wear and unpredictable surface finish in high-volume runs.</dd></div>
+              <div><dt class="s">Solution</dt><dd>Simulated toolpaths in Mastercam, programmed the G-code and recorded roughness data.</dd></div>
+              <div><dt class="o">Outcome</dt><dd>35% longer tool life with surface finish held below Ra 1.2 μm.</dd></div>
+            </dl>
+            <div class="project-foot">
+              <ul class="tags"><li class="tag">Mastercam</li><li class="tag">CNC milling</li><li class="tag">Metrology</li></ul>
+              <button class="btn btn-ghost" type="button" data-project="wear"><svg class="icon"><use href="#i-plus"/></svg>Full specification</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project">
+          <div class="project-media">
+            <span class="project-cat">Mechatronics</span>
+            <svg viewBox="0 0 400 280" role="img" aria-label="Top view of a two-wheel robot car whose ultrasonic sensor detects an obstacle ahead and steers along a dashed path around it">
+              <rect x="222" y="34" width="96" height="24" fill="#DCE7F3" stroke="#0F1B26" stroke-width="1.6"/>
+              <text x="270" y="50" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#0F1B26">Obstacle</text>
+              <g fill="none" stroke="#1A4B84" stroke-width="1.6" stroke-linecap="round">
+                <path d="M178.800 116.800A30 30 0 0 1 221.200 116.800"/>
+                <path d="M164.600 102.600A50 50 0 0 1 235.400 102.600" opacity=".75"/>
+                <path d="M150.500 88.500A70 70 0 0 1 249.500 88.500" opacity=".5"/>
+              </g>
+              <path d="M196 134C190 98 128 96 112 58" stroke="#C2410C" stroke-width="2" stroke-dasharray="7 5" fill="none" stroke-linecap="round" marker-end="url(#a3)"/>
+              <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1L10 5L0 9z" fill="#C2410C"/></marker></defs>
+              <g stroke="#0F1B26" stroke-width="1.6" stroke-linejoin="round">
+                <rect x="150" y="150" width="100" height="84" rx="10" fill="#fff"/>
+                <rect x="136" y="172" width="14" height="40" rx="3" fill="#0F1B26"/>
+                <rect x="250" y="172" width="14" height="40" rx="3" fill="#0F1B26"/>
+                <circle cx="200" cy="224" r="5" fill="#fff"/>
+                <rect x="186" y="136" width="28" height="14" rx="2" fill="#DCE7F3"/>
+                <circle cx="193" cy="143" r="3" fill="#fff"/><circle cx="207" cy="143" r="3" fill="#fff"/>
+              </g>
+              <text x="272" y="146" font-family="IBM Plex Mono,monospace" font-size="12" fill="#4B5966">HC-SR04</text>
+              <text x="200" y="196" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#4B5966">Controller</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Autonomous ultrasonic sensor robot car</h3>
+            <p>An autonomous mobile platform with a custom chassis, dual DC motors, ultrasonic distance sensing and collision-avoidance logic.</p>
+            <dl class="pso">
+              <div><dt class="p">Problem</dt><dd>Needed a compact, autonomous guidance testbed for moving small parts on the shop floor.</dd></div>
+              <div><dt class="s">Solution</dt><dd>Combined an HC-SR04 sonar sensor, servo scanning head and differential motor drive.</dd></div>
+              <div><dt class="o">Outcome</dt><dd>Navigated on its own with a 200 ms obstacle-avoidance response.</dd></div>
+            </dl>
+            <div class="project-foot">
+              <ul class="tags"><li class="tag">Arduino</li><li class="tag">Sensors</li><li class="tag">Automation</li></ul>
+              <button class="btn btn-ghost" type="button" data-project="robot"><svg class="icon"><use href="#i-plus"/></svg>Full specification</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CREDENTIALS ================= -->
+  <section class="section section-alt" id="credentials" aria-labelledby="cred-h">
+    <div class="wrap">
+      <div class="split-head">
+        <h2 id="cred-h">Education, awards and certifications</h2>
+        <p>Degree, diploma and trade training from Dayananda Sagar University, NTTF and Government ITI institutions in Karnataka.</p>
+      </div>
+
+      <div class="cred-grid">
+        <div>
+          <div class="col-title"><svg class="icon"><use href="#i-cap"/></svg><h3>Education</h3></div>
+          <ol class="timeline" style="list-style:none;padding-right:0">
+            <li class="tl-item current">
+              <span class="tl-date">2023 to 2026, in progress</span>
+              <h4>B.Voc in Tool Engineering</h4>
+              <p class="tl-org">Dayananda Sagar University</p>
+              <p class="tl-desc">Tooling design, injection molds, press tools, GD&amp;T and CAD/CAM workflows.</p>
+            </li>
+            <li class="tl-item current">
+              <span class="tl-date">2023 to 2026, in progress</span>
+              <h4>Diploma in Tool Engineering and Digital Manufacturing</h4>
+              <p class="tl-org">NTTF, Peenya, Bengaluru</p>
+              <p class="tl-desc">Industrial shop training, multi-axis machining and robotics.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-date">2023</span>
+              <h4>Advance CNC Machining Technician</h4>
+              <p class="tl-org">Govt ITI, BM Road, Hassan</p>
+              <p class="tl-desc">Programming and operation on industrial CNC turning and milling centers.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-date">2021</span>
+              <h4>Fitter Trade Certification</h4>
+              <p class="tl-org">Sri Siddeshwara ITI, Thanniruhalla, Hassan</p>
+              <p class="tl-desc">Mechanical fitting, precision measuring instruments, scraping and assembly tolerances.</p>
+            </li>
+            <li class="tl-item">
+              <span class="tl-date">2019</span>
+              <h4>Secondary education, 10th standard</h4>
+              <p class="tl-org">St. Joseph High School, Hassan</p>
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="col-title"><svg class="icon"><use href="#i-trophy"/></svg><h3>Competitions and credentials</h3></div>
+          <div class="awards">
+            <article class="award top">
+              <span class="award-icon"><svg class="icon"><use href="#i-trophy"/></svg></span>
+              <div>
+                <h4>4th rank, State-level WorldSkills<span class="badge">State honor</span></h4>
+                <p>CNC milling. Competed against the state's top vocational machinists in high-precision part manufacturing.</p>
+              </div>
+            </article>
+            <article class="award top">
+              <span class="award-icon"><svg class="icon"><use href="#i-medal"/></svg></span>
+              <div>
+                <h4>2nd place, Autodesk Design Competition<span class="badge">Runner-up</span></h4>
+                <p>Recognized for 3D parametric modeling and design optimization in the Autodesk suite.</p>
+              </div>
+            </article>
+            <article class="award">
+              <span class="award-icon"><svg class="icon"><use href="#i-badge"/></svg></span>
+              <div>
+                <h4>Junior Robot Operator and Programmer</h4>
+                <p>Certified for industrial robot cells: welding, pick-and-place and material handling routines.</p>
+              </div>
+            </article>
+            <article class="award">
+              <span class="award-icon"><svg class="icon"><use href="#i-badge"/></svg></span>
+              <div>
+                <h4>National Trade Certificate (NTC)</h4>
+                <p>Dual trade qualification in advanced CNC machining and precision fitting.</p>
+              </div>
+            </article>
+            <article class="award">
+              <span class="award-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+              <div>
+                <h4>CAD trainer and soft skills programs</h4>
+                <p>Ran Autodesk Fusion 360 training workshops for college faculty. Completed the Unnati soft skills and desktop publishing programs.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-h">Have a tooling job or a role in mind? Let's talk.</h2>
+        <p class="contact-lead">I'm available for tool design, CNC programming and digital manufacturing work, and I can start contributing from day one in a design office or on the factory floor.</p>
+
+        <ul class="contact-list">
+          <li class="contact-row">
+            <span class="contact-ico"><svg class="icon"><use href="#i-mail"/></svg></span>
+            <div><p class="contact-label">Email</p><a class="contact-value" href="mailto:jashanthjivith@gmail.com">jashanthjivith@gmail.com</a></div>
+            <button class="icon-btn" type="button" data-copy="jashanthjivith@gmail.com" data-msg="Email address copied" aria-label="Copy email address"><svg class="icon"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="contact-row">
+            <span class="contact-ico"><svg class="icon"><use href="#i-phone"/></svg></span>
+            <div><p class="contact-label">Phone</p><a class="contact-value" href="tel:+918710062575">+91 8710062575</a></div>
+            <button class="icon-btn" type="button" data-copy="+918710062575" data-msg="Phone number copied" aria-label="Copy phone number"><svg class="icon"><use href="#i-copy"/></svg></button>
+          </li>
+          <li class="contact-row">
+            <span class="contact-ico"><svg class="icon"><use href="#i-chat"/></svg></span>
+            <div><p class="contact-label">WhatsApp</p><a class="contact-value" href="https://wa.me/918710062575" target="_blank" rel="noopener">Message on WhatsApp</a></div>
+          </li>
+          <li class="contact-row">
+            <span class="contact-ico"><svg class="icon"><use href="#i-linkedin"/></svg></span>
+            <div><p class="contact-label">LinkedIn</p><a class="contact-value" href="https://www.linkedin.com/in/jashanthgowdar/" target="_blank" rel="noopener">linkedin.com/in/jashanthgowdar</a></div>
+          </li>
+          <li class="contact-row">
+            <span class="contact-ico"><svg class="icon"><use href="#i-pin"/></svg></span>
+            <div><p class="contact-label">Location</p><span class="contact-value">Hassan, Karnataka, India</span><p class="contact-note">Open to relocation, Bengaluru region</p></div>
+          </li>
+        </ul>
+        <button class="btn btn-on-dark" type="button" id="saveContact"><svg class="icon"><use href="#i-download"/></svg>Save to contacts</button>
+      </div>
+
+      <div class="form-card">
+        <h3>Send a message</h3>
+        <form id="contactForm" class="form-grid" novalidate>
+          <div class="form-row form-grid">
+            <div class="field"><label for="fName">Your name</label><input id="fName" name="name" type="text" autocomplete="name" required placeholder="Ramesh Kumar"></div>
+            <div class="field"><label for="fEmail">Your email</label><input id="fEmail" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="hr@company.com"></div>
+          </div>
+          <div class="field"><label for="fSubject">Subject</label><input id="fSubject" name="subject" type="text" required placeholder="Tool design opportunity"></div>
+          <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" name="message" rows="5" required placeholder="Tell me about the role or the tooling requirement."></textarea></div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+        <p class="form-status" id="formStatus" role="status" hidden></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>&copy; <span id="year">2026</span> Jashanth Gowda R. Hassan, Karnataka, India.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<dialog id="projectDialog" aria-labelledby="dlgTitle">
+  <div class="dlg-panel">
+    <div class="dlg-head">
+      <div><p class="dlg-domain" id="dlgDomain"></p><h3 id="dlgTitle"></h3></div>
+      <button class="dlg-x" type="button" data-close aria-label="Close specification"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="dlg-body">
+      <p id="dlgOverview"></p>
+      <div><h4 id="dlgListTitle"></h4><ul class="dlg-points" id="dlgPoints"></ul></div>
+      <p class="dlg-outcome" id="dlgOutcome"></p>
+    </div>
+    <div class="dlg-foot"><button class="btn btn-ghost" type="button" data-close>Close</button></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<!-- ================= PRINTABLE RÉSUMÉ ================= -->
+<div id="resume" aria-hidden="true">
+  <h1>Jashanth Gowda R</h1>
+  <p class="r-role">Tool Design and Digital Manufacturing Engineer | CNC and Robotics</p>
+  <p class="r-contact">+91 8710062575 &nbsp;|&nbsp; jashanthjivith@gmail.com &nbsp;|&nbsp; Hassan, Karnataka, India &nbsp;|&nbsp; linkedin.com/in/jashanthgowdar</p>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Tool engineering and digital manufacturing student with hands-on skills in 3D CAD modeling, FEA simulation, multi-axis CNC programming and industrial robotics. 4th rank at the State-level WorldSkills competition (CNC milling).</p>
+  </section>
+
+  <section>
+    <h2>Technical skills</h2>
+    <ul>
+      <li><strong>CAD:</strong> SolidWorks, Autodesk Fusion 360, AutoCAD</li>
+      <li><strong>CAM and CNC:</strong> Mastercam, Fusion 360 CAM, CNC milling and turning, G and M-code</li>
+      <li><strong>Simulation:</strong> ANSYS structural FEA</li>
+      <li><strong>Robotics:</strong> Industrial robot operator (welding, pick-and-place, material handling)</li>
+      <li><strong>Tooling and quality:</strong> Jigs and fixtures design, GD&amp;T, metrology, fitting</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>4th rank, State-level WorldSkills Competition (CNC milling)</li>
+      <li>2nd place, Autodesk Design Competition</li>
+      <li>Autodesk Fusion 360 trainer for college staff</li>
+      <li>Certified Junior Robot Operator and Programmer; National Trade Certificate (NTC)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Precision drilling jig:</strong> designed in SolidWorks using 3-2-1 locating and hardened bushes; cut setup time by 40%.</li>
+      <li><strong>CNC machining and tool wear optimization:</strong> Mastercam toolpaths and wear study; 35% longer tool life at Ra below 1.2 μm.</li>
+      <li><strong>Autonomous ultrasonic sensor robot car:</strong> Arduino-based obstacle avoidance with a 200 ms response.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="r-row"><span>B.Voc in Tool Engineering, Dayananda Sagar University</span><span>2023 to 2026 (in progress)</span></div>
+    <div class="r-row"><span>Diploma in Tool Engineering and Digital Manufacturing, NTTF Peenya, Bengaluru</span><span>2023 to 2026 (in progress)</span></div>
+    <div class="r-row"><span>Advance CNC Machining Technician, Govt ITI, BM Road, Hassan</span><span>2023</span></div>
+    <div class="r-row"><span>Fitter Trade, Sri Siddeshwara ITI, Hassan</span><span>2021</span></div>
+    <div class="r-row"><span>10th standard, St. Joseph High School, Hassan</span><span>2019</span></div>
+  </section>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---------- Toast ---------- */
+  let toastTimer;
+  function toast(msg) {
+    const t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+  }
+
+  /* ---------- Mobile navigation ---------- */
+  const header = $('.site-header');
+  const navBtn = $('#navToggle');
+  const nav = $('#primaryNav');
+
+  function setNav(open) {
+    nav.classList.toggle('open', open);
+    navBtn.setAttribute('aria-expanded', String(open));
+    navBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  navBtn.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+  $$('a', nav).forEach(a => a.addEventListener('click', () => setNav(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setNav(false); navBtn.focus(); }
+  });
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('open') && !header.contains(e.target)) setNav(false);
+  });
+  window.matchMedia('(min-width: 860px)').addEventListener('change', e => { if (e.matches) setNav(false); });
+
+  /* ---------- Active section in the nav ---------- */
+  const navLinks = $$('.nav a:not(.nav-cta)');
+  const linkById = new Map(navLinks.map(a => [a.getAttribute('href').slice(1), a]));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(l => l.removeAttribute('aria-current'));
+        const link = linkById.get(en.target.id);
+        if (link) link.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['top', 'about', 'skills', 'projects', 'credentials', 'contact'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+
+  /* ---------- Skill filter ---------- */
+  const chips = $$('.chip');
+  const skills = $$('.skill');
+  const countEl = $('#skillCount');
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    const cat = chip.dataset.filter;
+    let shown = 0;
+    chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+    skills.forEach(s => {
+      const show = cat === 'all' || s.dataset.cat === cat;
+      s.hidden = !show;
+      if (show) shown++;
+    });
+    countEl.textContent = `Showing ${shown} of ${skills.length} skills`;
+  }));
+
+  /* ---------- Project specification dialog ---------- */
+  const projects = {
+    jig: {
+      title: 'Design and fabrication of a precision drilling jig',
+      domain: 'Tool engineering, GD&T, production tooling',
+      overview: 'This project handled precision, repeatable drilling of cylindrical and prismatic parts without manual marking or punch alignment.',
+      listTitle: 'Key engineering aspects',
+      points: [
+        ['Locating:', 'Designed to the 3-2-1 locating principle, constraining all six degrees of freedom.'],
+        ['Bushings:', 'Press-fit hardened drill bushes (HRC 60-62) to prevent drill deflection and wear.'],
+        ['Clamping:', 'Quick-action cam latch for workpiece changeover in under 5 seconds.'],
+        ['Fabrication:', 'Milling, surface grinding for flatness, reaming for bushing seats and assembly fitting.']
+      ],
+      outcomeLabel: 'Shop-floor impact:',
+      outcome: 'Deployed in institutional workshops, reducing part rejection from 14% to under 0.5%.'
+    },
+    wear: {
+      title: 'CNC machining and tool wear optimization',
+      domain: 'Advanced CNC, Mastercam, surface metrology',
+      overview: 'A test program analyzing how milling parameters affect tool life, vibration chatter and surface roughness (Ra) on aluminium and mild steel.',
+      listTitle: 'Experimental procedure',
+      points: [
+        ['Toolpaths:', 'Created multi-depth pocketing and contouring toolpaths in Mastercam.'],
+        ['Programming:', 'Wrote Fanuc-compatible G and M-code and tuned coolant pressure and chip evacuation.'],
+        ['Measurement:', "Measured flank wear with a toolmaker's microscope and recorded surface profiles with a stylus profilometer."]
+      ],
+      outcomeLabel: 'Key finding:',
+      outcome: 'High-speed shallow radial cuts with trochoidal milling gave 35% longer tool life while keeping surface finish below Ra 1.2 μm.'
+    },
+    robot: {
+      title: 'Autonomous ultrasonic sensor robot car',
+      domain: 'Mechatronics, embedded control, autonomous vehicle',
+      overview: 'A two-wheel differential-drive vehicle with an HC-SR04 ultrasonic sensor mounted on a micro servo scanning head.',
+      listTitle: 'Design and hardware highlights',
+      points: [
+        ['Chassis:', 'CAD-modeled for a low center of gravity and stable payload.'],
+        ['Sensing:', 'Microcontroller logic scans a 180-degree sweep to find a clear path.'],
+        ['Drive:', 'PWM-controlled H-bridge motor drivers slow the car smoothly near obstacles.']
+      ],
+      outcomeLabel: 'Application:',
+      outcome: 'A proof of concept for compact automated material transfer in cellular manufacturing.'
+    }
+  };
+
+  const dlg = $('#projectDialog');
+  let lastTrigger = null;
+
+  function openProject(key, trigger) {
+    const p = projects[key];
+    if (!p) return;
+    lastTrigger = trigger || null;
+    $('#dlgTitle').textContent = p.title;
+    $('#dlgDomain').textContent = p.domain;
+    $('#dlgOverview').textContent = p.overview;
+    $('#dlgListTitle').textContent = p.listTitle;
+
+    const list = $('#dlgPoints');
+    list.replaceChildren();
+    p.points.forEach(([label, text]) => {
+      const li = document.createElement('li');
+      const b = document.createElement('strong');
+      b.textContent = label + ' ';
+      li.append(b, text);
+      list.append(li);
+    });
+
+    const out = $('#dlgOutcome');
+    out.replaceChildren();
+    const ob = document.createElement('strong');
+    ob.textContent = p.outcomeLabel + ' ';
+    out.append(ob, p.outcome);
+
+    document.body.classList.add('lock');
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    $('.dlg-body', dlg).scrollTop = 0;
+  }
+  function closeProject() {
+    if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open');
+    document.body.classList.remove('lock');
+    if (lastTrigger) lastTrigger.focus();
+  }
+  $$('[data-project]').forEach(btn => btn.addEventListener('click', () => openProject(btn.dataset.project, btn)));
+  $$('[data-close]', dlg).forEach(btn => btn.addEventListener('click', closeProject));
+  dlg.addEventListener('click', e => { if (e.target === dlg) closeProject(); });
+  dlg.addEventListener('close', () => {
+    document.body.classList.remove('lock');
+    if (lastTrigger) lastTrigger.focus();
+  });
+
+  /* ---------- Copy to clipboard ---------- */
+  function legacyCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    const ok = document.execCommand('copy');
+    ta.remove();
+    if (!ok) throw new Error('copy failed');
+  }
+  async function copyText(text, msg) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text);
+      else legacyCopy(text);
+      toast(msg);
+    } catch (err) {
+      try { legacyCopy(text); toast(msg); }
+      catch (e) { toast('Could not copy. Please select and copy it manually.'); }
+    }
+  }
+  $$('[data-copy]').forEach(btn => btn.addEventListener('click', () => copyText(btn.dataset.copy, btn.dataset.msg || 'Copied')));
+
+  /* ---------- Contact form (opens the visitor's email app) ---------- */
+  const form = $('#contactForm');
+  const status = $('#formStatus');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const data = new FormData(form);
+    const name = String(data.get('name')).trim();
+    const email = String(data.get('email')).trim();
+    const subject = String(data.get('subject')).trim();
+    const message = String(data.get('message')).trim();
+    const body = `${message}\n\n${name}\n${email}`;
+    const href = 'mailto:jashanthjivith@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    status.hidden = false;
+    status.textContent = 'Your email app should now open with this message ready to send. If nothing opens, write to jashanthjivith@gmail.com directly.';
+    window.location.href = href;
+  });
+
+  /* ---------- Save contact (.vcf) ---------- */
+  function downloadFile(filename, content, type) {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  $('#saveContact').addEventListener('click', () => {
+    const vcf = [
+      'BEGIN:VCARD', 'VERSION:3.0',
+      'N:R;Jashanth Gowda;;;', 'FN:Jashanth Gowda R',
+      'TITLE:Tool Design and Digital Manufacturing Engineer',
+      'TEL;TYPE=CELL:+918710062575',
+      'EMAIL;TYPE=INTERNET:jashanthjivith@gmail.com',
+      'ADR;TYPE=HOME:;;;Hassan;Karnataka;;India',
+      'URL:https://www.linkedin.com/in/jashanthgowdar/',
+      'END:VCARD'
+    ].join('\r\n');
+    downloadFile('Jashanth_Gowda_R.vcf', vcf, 'text/vcard;charset=utf-8');
+    toast('Contact card downloaded');
+  });
+
+  /* ---------- Résumé: print to PDF ---------- */
+  $$('[data-print]').forEach(btn => btn.addEventListener('click', () => {
+    toast('In the print window, choose "Save as PDF".');
+    setTimeout(() => window.print(), 400);
+  }));
+})();
+</script>
+</body>
+</html>
